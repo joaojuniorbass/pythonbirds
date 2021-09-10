@@ -8,7 +8,13 @@ class Pessoa:
 
 
 if __name__ == "__main__":
-    pessoa = Pessoa('Pedro', 'Augusta', 'Josué')
-    print(pessoa.cumprimentar('Anderson do Molejão'))
-    for nome in pessoa.filhos:
-        print(f'Um filho se chama {nome}')
+    joao = Pessoa('Barik', 'Inara')
+    io = Pessoa(nome = 'Io - a princesalunar', idade = 22)
+    print(io.cumprimentar('Inara'))
+    print(joao.cumprimentar('Maldamba'))
+    for filho in joao.filhos:
+        print(f'Este é o  meu filho {filho}')
+    joao.sobrenome = 'Marins'
+    del io.filhos
+    print(io.__dict__)
+    print(joao.__dict__)
