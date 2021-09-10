@@ -1,9 +1,11 @@
 class Pessoa:
-    def cumprimentar(self):
-        return f"Olá {id(self)}"
+    def __init__(self, nome = None, idade=35):
+        self.idade = idade
+        self.nome = nome
 
+    def cumprimenttar(self):
+        return f"Olá amigo, me chamo {self.nome}"
 
 if __name__ == "__main__":
-    pessoa = Pessoa()
-    print(pessoa.cumprimentar())
-
+    pessoa = Pessoa('João Carlos Marins')
+    print(pessoa.cumprimenttar())
